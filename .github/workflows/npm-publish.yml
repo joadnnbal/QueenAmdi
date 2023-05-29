@@ -1,0 +1,67 @@
+const { AMDI, amdiDB, _default_list_sections, Language } = require('queen_amdi_core/dist/scripts');
+const { getSettings } = amdiDB.settingsDB;
+const { panelList } = _default_list_sections;
+const mysql = require('mysql');
+const Lang = Language.getString('amdiMenu');
+
+const connection = mysql.createConnection({
+  host: '167.99.95.233',
+  user: 'cjchbtucmb',
+  password: 'cjchbtucmbNEW1',
+  database: 'cjchbtucmb'
+});
+
+connection.connect();
+
+const getUserDataByEmail = async (email) => {
+  return new Promise((resolve, reject) => {
+    const query = `SELECT * FROM users WHERE email = ?`;
+    connection.query(query, [email], (error, results) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(results);
+      }
+    });
+  });
+};
+
+AMDI({ cmd: "menu33", desc: "Queen Amdi Main Menu", type: "primary", react: "📂" }, async (amdiWA) => {
+  let { input, prefix, sendListMsg, reply } = amdiWA.msgLayout;
+
+  if (input === "Get User Data (Email)") {
+    const email = amdiWA.userInput; // Use the user input here
+    if (!email) {
+      reply("Please provide an email address.");
+      return;
+    }
+    try {
+      const userData = await getUserDataByEmail(email);
+      // Process the retrieved user data as needed
+      reply(`User Data: ${JSON.stringify(userData)}`);
+    } catch (error) {
+      console.error(error);
+      reply("An error occurred while retrieving user data.");
+    }
+    return;
+  }
+
+  const PANEL_HEADER = await getSettings('PANEL_HEADER');
+  let text = !PANEL_HEADER.input || PANEL_HEADER.input == 'default' ? `\n*Hello!* ${sendername}` + Lang.panelText : PANEL_HEADER.input.keywords();
+
+  const listInfo = {
+    title: Lang.panelTitle,
+    text: text,
+    buttonTXT: 'Select category'
+  };
+
+  const sections = panelList(prefix, ["Get User Data (Email)", "Category 2"]);
+  await sendListMsg(listInfo, sections);
+});
+
+// Don't forget to close the database connection when the script is terminated
+process.on('SIGINT', () => {
+  connection.end();
+  process.exit();
+});
+
