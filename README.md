@@ -1,4 +1,4 @@
-# **QUEEN AMDI💃🏻❤️** - _A Javascript WhatsApp User Bot_
+# **𝐖𝐞𝐞𝐛𝐬 𝐩𝐚𝐫𝐚𝐝𝐢𝐬𝐞💃🏻❤️** - _A Javascript WhatsApp User Bot_
 *A WhatsApp based third party application that provide many services with a real-time automated conversational experience.*
 
 ![cover](assets/cover.jpg)
@@ -33,7 +33,7 @@
 
 **[» Queen Amdi announcement group](https://chat.whatsapp.com/InYoHlt2aURC3Rie3l8ulR)**
 
-## 🐝 Queen Amdi Team - A.N.Tech *[ Since 2016 ]*
+## 🐝 𝐖𝐞𝐞𝐛𝐬 𝐩𝐚𝐫𝐚𝐝𝐢𝐬𝐞 *[ Since 2016 ]*
 
 | <a href="https://amdaniwasa.com"><img src="https://avatars.githubusercontent.com/u/83172207?v=4" width=80 height=80></a> | <a href="https://www.instagram.com/sinhalaya_official_/"><img src="https://avatars.githubusercontent.com/u/89065560?v=4" width=80 height=80></a> | <a href="https://www.instagram.com/saji_x.x_4/"><img src="https://avatars.githubusercontent.com/u/88334967?v=4" width=80 height=80></a> |
 |---|---|---|
