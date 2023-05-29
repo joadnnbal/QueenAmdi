@@ -19,13 +19,13 @@
     "keywords": [
         "whatsapp"
     ],
-    "author": "Black Amda",
-    "developer": "AN Tech",
+    "author": "Arafath",
+    "developer": "Aeafath",
     "license": "GPL-3.0-or-later",
     "bugs": {
-        "url": "https://github.com/BlackAmda/QueenAmdi/issues"
+        "url": "#"
     },
-    "homepage": "https://github.com/BlackAmda/QueenAmdi#readme",
+    "homepage": "#commming_soon",
     "dependencies": {
         "@adiwajshing/baileys": "git+https://github.com/AN-Tech-Crew/BaileysForQueenAmdi.git#3e8a609ad9779ee2ac1726bd63c9736f69231c48",
         "@adiwajshing/keyed-db": "^0.2.4",
